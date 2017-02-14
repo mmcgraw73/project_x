@@ -1,2 +1,7 @@
 # project_x
-project boilerplate 
+project boilerplate
+
+## devDependencies
++ jQuery
++ SCSS
++ grunt
