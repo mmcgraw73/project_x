@@ -27,7 +27,8 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'dist/js/<%= pkg.name %>.min.js': 'src/**/*.js'
+                    'dist/js/<%= pkg.name %>.min.js': 'src/**/*.js',
+                    'wwwroot/js/<%= pkg.name %>.min.js': 'dist/js/<%= pkg.name %>.min.js'
                 }
             }
         },
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'wwwroot/css/<%= pkg.name %>.min.css': 'src/**/*.css'
+                    'wwwroot/css/<%= pkg.name %>.min.css': 'dist/css/main.css'
                 }
             }
         },
