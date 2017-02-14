@@ -1,7 +1,13 @@
 # project_x
 project boilerplate
 
-## devDependencies
+## Front-End Stack
 + jQuery
 + SCSS
-+ grunt
+
+## Grunt Tasks
++ jshint
++ uglify
++ sass
++ cssmin
++ watch
