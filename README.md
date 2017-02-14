@@ -1,11 +1,11 @@
 # project_x
 project boilerplate
 
-## Front-End Stack
+### Front-End Stack
 + jQuery
 + SCSS
 
-## Grunt Tasks
+### Grunt Tasks
 + jshint
 + uglify
 + sass
