@@ -1,5 +1,11 @@
 html body {
   min-width: 100%;
   min-height: 500px;
-  background-color: $c-red;
+  overflow-x: hidden;
+  background-color: $c-black;
+  font-family: $f-ganton;
+  font-size: $fs-large;
+  color: $c-green;
+  text-align: center;
+  letter-spacing: 14px;
 }
