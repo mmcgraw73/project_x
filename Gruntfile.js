@@ -27,12 +27,25 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'dist/js/<%= pkg.name %>.min.js': 'src/**/*.js',
-                    'wwwroot/js/<%= pkg.name %>.min.js': 'dist/js/<%= pkg.name %>.min.js'
+                    'wwwroot/dist/js/<%= pkg.name %>.min.js': 'wwwroot/src/**/*.js',
+                    'wwwroot/js/<%= pkg.name %>.min.js': 'wwwroot/dist/js/<%= pkg.name %>.min.js'
                 }
             }
         },
-
+        wiredep: {
+            task: {
+                // Point to the files that should be updated when
+                // you run `grunt wiredep`
+                src: [
+                    'wwwroot/**/*.html'
+                ],
+                options: {
+                    // See wiredep's configuration documentation for the options
+                    // you may pass:
+                    // https://github.com/taptapship/wiredep#configuration
+                }
+            }
+        },
         // compile scss stylesheets to css -----------------------------------------
         sass: {
             options: {
@@ -40,7 +53,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/main.css': 'src/scss/main.scss'
+                    'wwwroot/dist/css/main.css': 'wwwroot/src/scss/main.scss'
                 }
             }
         },
@@ -52,7 +65,7 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    'wwwroot/css/<%= pkg.name %>.min.css': 'dist/css/main.css'
+                    'wwwroot/css/<%= pkg.name %>.min.css': 'wwwroot/dist/css/main.css'
                 }
             }
         },
@@ -60,11 +73,11 @@ module.exports = function(grunt) {
         // configure watch to auto update ------------------------------------------
         watch: {
             stylesheets: {
-                files: ['src/css/<%= pkg.name %>.css', 'src/scss/*.scss'],
+                files: ['wwwroot/src/css/<%= pkg.name %>.css', 'wwwroot/src/scss/*.scss'],
                 tasks: ['sass', 'cssmin']
             },
             scripts: {
-                files: 'src/js/*.js',
+                files: 'wwwroot/src/js/*.js',
                 tasks: ['jshint', 'uglify']
             }
         }
@@ -76,6 +89,7 @@ module.exports = function(grunt) {
     // ===========================================================================
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-wiredep');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -83,6 +97,6 @@ module.exports = function(grunt) {
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
-    grunt.registerTask('default', ['jshint', 'uglify', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'wiredep', 'sass', 'cssmin']);
 
 };

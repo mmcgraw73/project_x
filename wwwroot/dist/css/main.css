@@ -1,0 +1,19 @@
+/*
+===font-families===
+*/
+/*
+===font-families===
+*/
+html body {
+  min-width: 100%;
+  min-height: 500px;
+  overflow-x: hidden;
+  background-color: #1d1f20;
+  font-family: "Barrio", cursive;
+  font-size: 36px;
+  color: #4bd84b;
+  text-align: center;
+  letter-spacing: 14px;
+}
+
+/*# sourceMappingURL=main.css.map */
