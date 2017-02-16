@@ -1,7 +1,7 @@
 {
   "name": "project_x",
   "description": "web app boilerplate",
-  "main": "",
+  "main": "dist/jquery.min.js",
   "authors": [
     "michael@mcgraw.codes"
   ],

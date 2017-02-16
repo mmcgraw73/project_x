@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                 force: true,
                 reporterOutput: ""
             },
-            build: ['Grunfile.js', 'src/**/*.js']
+            build: ['Grunfile.js', 'wwwroot/src/**/*.js']
             //all: ['Grunfile.js', 'src/js/*.js']
         },
 
@@ -43,7 +43,16 @@ module.exports = function(grunt) {
                     // See wiredep's configuration documentation for the options
                     // you may pass:
                     // https://github.com/taptapship/wiredep#configuration
-                }
+                },
+                packages: {
+                    jquery: {
+                        main: [Object],
+                        type: [Object],
+                        name: 'jquery',
+                        dependencies: {}
+                    }
+                },
+                js: ['bower_components/jquery/dist/jquery.min.js']
             }
         },
         // compile scss stylesheets to css -----------------------------------------
@@ -70,6 +79,24 @@ module.exports = function(grunt) {
             }
         },
 
+        modernizr: {
+            dist: {
+                "crawl": false,
+                "customTests": [],
+                "tests": [
+                    "canvas",
+                    "es5"
+                ],
+                "options": [
+                    "domPrefixes",
+                    "prefixes",
+                    "html5shiv",
+                    "setClasses"
+                ],
+                "uglify": true
+            }
+        },
+
         // configure watch to auto update ------------------------------------------
         watch: {
             stylesheets: {
@@ -89,14 +116,16 @@ module.exports = function(grunt) {
     // ===========================================================================
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-wiredep');
+    //grunt.loadNpmTasks('grunt-wiredep');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks("grunt-modernizr");
+
 
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
-    grunt.registerTask('default', ['jshint', 'uglify', 'wiredep', 'sass', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'sass', 'cssmin']);
 
 };

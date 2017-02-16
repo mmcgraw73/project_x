@@ -19,17 +19,16 @@
     "grunt-contrib-stylus": "0.8.x",
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "0.5.x",
+    "grunt-modernizr": "^1.0.2",
     "grunt-sass": "^2.0.0",
     "grunt-wiredep": "^3.0.1",
-    "jquery": "latest",
+    "jquery": "^3.1.1",
     "jshint-stylish": "^2.2.1",
     "load-grunt-tasks": "^3.5.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mmcgraw73/project_x.git"
-  },
+  "repository": "https://github.com/mmcgraw73/project_x.git",
   "engine": "node >= 0.10",
   "license": "MIT",
-  "author": "michael@mcgraw.codes"
+  "author": "michael@mcgraw.codes",
+  "main": "index.js"
 }
