@@ -1,17 +1,74 @@
 /* Layout
   =============== */
 
+  @import 'variables';
+  @import 'typography';
+
   html, body {
     min-width: 100%;
     min-height: 500px;
-    padding: 30px;
+    padding: 10px;
     overflow-x: hidden;
     background-color: $c-black;
+    font-family: $f-gcutive;
+    .social_icons {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      color: $c-redr;
+      font-size: 0.6rem;
+      .small-30 {
+        input[type='text'] {
+          background: transparent !important;
+          border: none;
+          outline: none;
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
 
+      ul {
+        margin: 0;
+        li {
+          list-style-type: none;
+          display: inline;
+          margin: 0 3px;
+          a {
+            i {
+              color: $c-redr;
+            }
+          }
+        }
+      }
+    }
     nav {
       height: 300px;
-      background: inherit;
+      background-color: $c-black;
+      ul {
+        list-style: none;
+      }
+      a {
+        color: $c-yellow;
+      }
+      h1 {
+        font-size: .8rem;
+        color: $c-redr;
+        font-family: $f-gcutive;
+        margin: 0;
+        max-width: 235px;
+
+      }
     }
 
 
+  }
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: $c-green;
+    fill: $c-green;
   }

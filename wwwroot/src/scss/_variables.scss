@@ -18,7 +18,7 @@ $desktop: $medium;
 
 /* Colors */
 
-$background: #ffffff;
+$background: rgb(44, 53, 66);
 $primary-color: #1E6BD6;
 $secondary-color: #47CE90;
 $accent-color: #cdcdcd;
@@ -33,12 +33,20 @@ $c-red: rgb(211, 40, 40);
 $c-blue: rgb(69, 129, 209);
 $c-green: rgb(75, 216, 75);
 $c-black: rgba(29, 31, 32, 1);
-
+$c-greyblue: rgb(44, 53, 66);
+$c-yellow: rgb(236, 242, 79);
+$c-purple: rgb(22, 20, 30);
+$c-redr: rgb(214, 62, 62);
+$c-bluer: rgb(94, 152, 186);
+$c-codepen: rgb(34, 34, 34);
+$c-dark: rgb(17, 17, 17);
+$c-white: rgb(255, 246, 229);
+$c-rt-red: rgb(191, 8, 0);
 /* Typography */
 
 // Body font
-$font-size: 1rem;
-$body-font-size: 1rem;
+$font-size: 2rem;
+$body-font-size: 2rem;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
