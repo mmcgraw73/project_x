@@ -12,10 +12,10 @@
 ![alt tag](img/pokitdok-50.png)
 
 ### dev tools used
-+ [grunt](http://gruntjs.com/)
-+ [browserify](http://browserify.org/)
-+ [beefy](http://didact.us/beefy/)
-+ [sass](http://sass-lang.com/) / [primitive](https://taniarascia.github.io/primitive/)
-+ [node](https://nodejs.org/en/)
++ [grunt](http://gruntjs.com/) - javascript task runner
++ [browserify](http://browserify.org/) - front-end dependency management
++ [beefy](http://didact.us/beefy/) - local development server
++ [sass](http://sass-lang.com/) / [primitive](https://taniarascia.github.io/primitive/) - stylesheet language / scss library
++ [node](https://nodejs.org/en/) - open-source, cross-platform JavaScript runtime environment 
 
 ### ** currently not mobile friendly **  
