@@ -7,9 +7,9 @@
 
 ### screenshots
 #### default view on page load:
-+ ![alt tag](img/pokitdok-default-view.png)
+![alt tag](img/pokitdok-default-view.png)
 #### view after input submit:
-+ ![alt tag](img/pokitdok-50.png)
+![alt tag](img/pokitdok-50.png)
 
 ### dev tools used
 + [grunt](http://gruntjs.com/)
