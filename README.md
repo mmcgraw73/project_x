@@ -2,12 +2,5 @@
 Test Application for the PokitDok API
 
 ### screenshots
-+ ![alt tag](mmcgraw73/project_x/pokitdok/img/pokitdok-default-view.png)
-+ ![alt tag](mmcgraw73/project_x/pokitdok/img/pokitdok-50.png)
-
-### Grunt Tasks
-+ jshint
-+ uglify
-+ sass
-+ cssmin
-+ watch
++ ![alt tag](img/pokitdok-default-view.png)
++ ![alt tag](img/pokitdok-50.png)
