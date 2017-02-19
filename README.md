@@ -1,13 +1,6 @@
 # project_x
-project boilerplate
+Test Application for the PokitDok API
 
-### Front-End Stack
-+ jQuery
-+ SCSS
-
-### Grunt Tasks
-+ jshint
-+ uglify
-+ sass
-+ cssmin
-+ watch
+### screenshots
++ ![alt tag](img/pokitdok-default-view.png)
++ ![alt tag](img/pokitdok-50.png)
