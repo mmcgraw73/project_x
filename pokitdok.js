@@ -96,7 +96,7 @@ function PokitdokApp() {
                 tpCount = document.getElementById('tpCount'),
                 PokitDok = require('pokitdok-nodejs'),
                 pokitdok = new PokitDok(cid, csc),
-                loadingStr = '<i style="text-align: center;" class="fa fa-spinner fa-pulse fa-fw"></i>',
+                loadingStr = '<i style="text-align: center; position: relative; z-index: 999;" class="fa fa-spinner fa-pulse fa-fw"></i>',
                 div4 = document.getElementById('div4'),
                 div2 = document.getElementById('div2'),
                 div3 = document.getElementById('div3'),
@@ -150,7 +150,7 @@ function PokitdokApp() {
             var tblEl = document.getElementById('dataTbl');
             tblEl.insertAdjacentHTML('afterbegin', theadStr);
             for (var i = 0; i < num; i++) {
-                div2.insertAdjacentHTML('beforeend', '<span class="tpName small-25">' + tradingPartnersArr[i].name + '</span>' +
+                div2.insertAdjacentHTML('beforeend', '<span class="tpName small-25" title="' + tradingPartnersArr[i].name + '">' + tradingPartnersArr[i].name + '</span>' +
                     '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('837') > -1) + '</span>' +
                     '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('270') > -1) + '</span>' +
                     '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('276') > -1) + '</span>');
