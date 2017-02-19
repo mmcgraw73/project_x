@@ -26,7 +26,7 @@ function PokitdokApp() {
             this.docBuildr();
             this.updateTitle();
             this.addInput();
-            this.addButton();
+            this.addButton('submit');
             this.getTradingPartners();
 
 
@@ -73,9 +73,9 @@ function PokitdokApp() {
                 self.createEle('div', 'end', 'div' + i);
             }
         },
-        addButton: function() {
+        addButton: function(txt) {
             var self = this,
-                htmlStr = '<div class="small-30"><button id="submit" class="square-button">submit</button></div>',
+                htmlStr = '<div class="small-30"><button id=' + txt + ' class="square-button">' + txt + '</button></div>',
                 div1 = document.getElementById('div1');
             div1.insertAdjacentHTML('beforeend', htmlStr);
         },
@@ -87,7 +87,6 @@ function PokitdokApp() {
             div1.insertAdjacentHTML('afterbegin', labelStr);
             div1.insertAdjacentHTML('beforeend', inputStr);
         },
-
         //connect + return trading parners json from pokitdok api
         getTradingPartners: function() {
             var self = this,
@@ -100,6 +99,8 @@ function PokitdokApp() {
                 pokitdok = new PokitDok(cid, csc),
                 loadingStr = '<i style="text-align: center;" class="fa fa-spinner fa-pulse fa-fw"></i>',
                 div4 = document.getElementById('div4'),
+                div2 = document.getElementById('div2'),
+                div3 = document.getElementById('div3'),
                 icon = document.querySelector('.fa-spinner');
             div4.insertAdjacentHTML('afterbegin', loadingStr);
             pokitdok.tradingPartners(function(err, res) {
@@ -120,7 +121,7 @@ function PokitdokApp() {
                 return self.settings.retData;
             });
             submit.addEventListener('click', function(e) {
-                if (tpCount.value > 0) {
+                if (tpCount.value > 0 && div2.innerHTML === '') {
                     self.createList(tpCount.value);
                     self.updateSpanBackgrounds();
                     self.nameHover();
@@ -139,14 +140,19 @@ function PokitdokApp() {
                 div2 = document.getElementById('div2'),
                 tblStr = '<table id="dataTbl" class="striped-table">',
                 theadStr = '<thead><tr><th>name</th><th>support 837</th><th>support 270</th><th>support 276</th></tr></thead>';
-            div3.insertAdjacentHTML('afterbegin', tblStr);
-            var tblEl = document.getElementById('dataTbl');
-            tblEl.insertAdjacentHTML('afterbegin', theadStr);
-            for (var i = 0; i < num; i++) {
-                div2.insertAdjacentHTML('beforeend', '<span class="tpName small-25">' + tradingPartnersArr[i].name + '</span>' +
-                    '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('837') > -1) + '</span>' +
-                    '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('270') > -1) + '</span>' +
-                    '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('276') > -1) + '</span>');
+            if (document.getElementById('div3').innerHTML !== '') {
+                document.getElementById('div3').innerHTML = '';
+                document.getElementById('div2').innerHTML = '';
+            } else {
+                div3.insertAdjacentHTML('afterbegin', tblStr);
+                var tblEl = document.getElementById('dataTbl');
+                tblEl.insertAdjacentHTML('afterbegin', theadStr);
+                for (var i = 0; i < num; i++) {
+                    div2.insertAdjacentHTML('beforeend', '<span class="tpName small-25">' + tradingPartnersArr[i].name + '</span>' +
+                        '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('837') > -1) + '</span>' +
+                        '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('270') > -1) + '</span>' +
+                        '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('276') > -1) + '</span>');
+                }
             }
         },
         updateSpanBackgrounds: function() {

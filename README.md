@@ -17,3 +17,5 @@
 + [beefy](http://didact.us/beefy/)
 + [sass](http://sass-lang.com/)
 + [node](https://nodejs.org/en/)
+
+### ** currently not mobile friendly **  
