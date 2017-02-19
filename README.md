@@ -6,7 +6,9 @@
 - [pokitdok.js](https://github.com/mmcgraw73/project_x/blob/pokitdok/pokitdok.js)
 
 ### screenshots
+#### default view on page load:
 + ![alt tag](img/pokitdok-default-view.png)
+#### view after input submit:
 + ![alt tag](img/pokitdok-50.png)
 
 ### dev tools used
