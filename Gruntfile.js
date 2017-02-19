@@ -5,11 +5,10 @@ module.exports = function(grunt) {
     // ===========================================================================
     grunt.initConfig({
 
-        // get the configuration info from package.json ----------------------------
-        // this way we can use things like name and version (pkg.name)
+        // get the configuration info from package.json
         pkg: grunt.file.readJSON('package.json'),
 
-        // configure jshint to validate js files -----------------------------------
+        // configure jshint to validate js files
         jshint: {
             options: {
                 reporter: require('jshint-stylish'),
@@ -17,10 +16,9 @@ module.exports = function(grunt) {
                 reporterOutput: ""
             },
             build: ['Grunfile.js', 'wwwroot/src/**/*.js']
-            //all: ['Grunfile.js', 'src/js/*.js']
         },
 
-        // configure uglify to minify js files -------------------------------------
+        // configure uglify to minify js files
         uglify: {
             options: {
                 banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n <%= pkg.author %>\n*/\n'
@@ -32,30 +30,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        wiredep: {
-            task: {
-                // Point to the files that should be updated when
-                // you run `grunt wiredep`
-                src: [
-                    'wwwroot/**/*.html'
-                ],
-                options: {
-                    // See wiredep's configuration documentation for the options
-                    // you may pass:
-                    // https://github.com/taptapship/wiredep#configuration
-                },
-                packages: {
-                    jquery: {
-                        main: [Object],
-                        type: [Object],
-                        name: 'jquery',
-                        dependencies: {}
-                    }
-                },
-                js: ['bower_components/jquery/dist/jquery.min.js']
-            }
-        },
-        // compile scss stylesheets to css -----------------------------------------
+        // compile scss stylesheets to css
         sass: {
             options: {
                 style: 'expanded'
@@ -67,7 +42,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // configure cssmin to minify css files ------------------------------------
+        // configure cssmin to minify css files
         cssmin: {
             options: {
                 banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n <%= pkg.author %>\n*/\n'
@@ -79,25 +54,7 @@ module.exports = function(grunt) {
             }
         },
 
-        modernizr: {
-            dist: {
-                "crawl": false,
-                "customTests": [],
-                "tests": [
-                    "canvas",
-                    "es5"
-                ],
-                "options": [
-                    "domPrefixes",
-                    "prefixes",
-                    "html5shiv",
-                    "setClasses"
-                ],
-                "uglify": true
-            }
-        },
-
-        // configure watch to auto update ------------------------------------------
+        // configure watch to auto update 
         watch: {
             stylesheets: {
                 files: ['wwwroot/src/css/<%= pkg.name %>.css', 'wwwroot/src/scss/*.scss'],
@@ -116,13 +73,9 @@ module.exports = function(grunt) {
     // ===========================================================================
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    //grunt.loadNpmTasks('grunt-wiredep');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    //grunt.loadNpmTasks("grunt-modernizr");
-
-
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
