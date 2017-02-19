@@ -17,10 +17,6 @@ function PokitdokApp() {
                 title: 'PokitDok',
                 author: 'mmcgraw73'
             };
-            this.varSet = {
-                pd_orange: '#E88024',
-                pd_purp: '#61285f'
-            };
             this.addStyleSheet('wwwroot/css/project_x.min.css');
             this.addStyleSheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
             this.docBuildr();
@@ -28,8 +24,6 @@ function PokitdokApp() {
             this.addInput();
             this.addButton('submit');
             this.getTradingPartners();
-
-
         },
         /*
         load external stylesheet
@@ -73,12 +67,17 @@ function PokitdokApp() {
                 self.createEle('div', 'end', 'div' + i);
             }
         },
+        /*
+        create a button and add to header element
+        @param txt str for button id and the button txt
+        */
         addButton: function(txt) {
             var self = this,
                 htmlStr = '<div class="small-30"><button id=' + txt + ' class="square-button">' + txt + '</button></div>',
                 div1 = document.getElementById('div1');
             div1.insertAdjacentHTML('beforeend', htmlStr);
         },
+        //create a number input for the list count
         addInput: function() {
             var self = this,
                 labelStr = '<div class="small-30"><label id="numLabel" for="tpCount">how many trading partners to view ?</label></div>',
@@ -135,7 +134,6 @@ function PokitdokApp() {
                     self.nameHover();
                 }
             });
-
         },
         /*
           --createList is the quick + dirty solution for generating table in dom
