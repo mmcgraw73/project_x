@@ -15,7 +15,7 @@
 + [grunt](http://gruntjs.com/)
 + [browserify](http://browserify.org/)
 + [beefy](http://didact.us/beefy/)
-+ [sass](http://sass-lang.com/)
++ [sass](http://sass-lang.com/) / [primitive](https://taniarascia.github.io/primitive/)
 + [node](https://nodejs.org/en/)
 
 ### ** currently not mobile friendly **  
