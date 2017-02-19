@@ -121,7 +121,15 @@ function PokitdokApp() {
                 return self.settings.retData;
             });
             submit.addEventListener('click', function(e) {
-                if (tpCount.value > 0 && div2.innerHTML === '') {
+                if (tpCount.value > 0 && tpCount.value <= tparr.length && div2.innerHTML === '') {
+                    self.createList(tpCount.value);
+                    self.updateSpanBackgrounds();
+                    self.nameHover();
+                } else if (tpCount.value > tparr.length) {
+                    alert('whoopsy!! -- the max num is: ' + tparr.length);
+                } else {
+                    div2.innerHTML = '';
+                    div3.innerHTML = '';
                     self.createList(tpCount.value);
                     self.updateSpanBackgrounds();
                     self.nameHover();
@@ -140,19 +148,14 @@ function PokitdokApp() {
                 div2 = document.getElementById('div2'),
                 tblStr = '<table id="dataTbl" class="striped-table">',
                 theadStr = '<thead><tr><th>name</th><th>support 837</th><th>support 270</th><th>support 276</th></tr></thead>';
-            if (document.getElementById('div3').innerHTML !== '') {
-                document.getElementById('div3').innerHTML = '';
-                document.getElementById('div2').innerHTML = '';
-            } else {
-                div3.insertAdjacentHTML('afterbegin', tblStr);
-                var tblEl = document.getElementById('dataTbl');
-                tblEl.insertAdjacentHTML('afterbegin', theadStr);
-                for (var i = 0; i < num; i++) {
-                    div2.insertAdjacentHTML('beforeend', '<span class="tpName small-25">' + tradingPartnersArr[i].name + '</span>' +
-                        '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('837') > -1) + '</span>' +
-                        '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('270') > -1) + '</span>' +
-                        '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('276') > -1) + '</span>');
-                }
+            div3.insertAdjacentHTML('afterbegin', tblStr);
+            var tblEl = document.getElementById('dataTbl');
+            tblEl.insertAdjacentHTML('afterbegin', theadStr);
+            for (var i = 0; i < num; i++) {
+                div2.insertAdjacentHTML('beforeend', '<span class="tpName small-25">' + tradingPartnersArr[i].name + '</span>' +
+                    '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('837') > -1) + '</span>' +
+                    '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('270') > -1) + '</span>' +
+                    '<span class="tpName small-25 vertical-center">' + (tradingPartnersArr[i].supported_transactions.indexOf('276') > -1) + '</span>');
             }
         },
         updateSpanBackgrounds: function() {
