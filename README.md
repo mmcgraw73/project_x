@@ -1,5 +1,4 @@
 ![Alt text](https://pokitdok.com/img/logo.png "PokitDok")
-# PokitDok API Test Application
 
 ## Instructions:
 - Make a web application that connects to our API
