@@ -1,4 +1,4 @@
-# <center>PokitDok Test Application</center>
+# <center> PokitDok Test Application </center>
 
 ## Instructions:
 - Make a web application that connects to our API
@@ -41,6 +41,9 @@
 + [sass](http://sass-lang.com/) / [primitive](https://taniarascia.github.io/primitive/) - stylesheet language / scss library
 + [node](https://nodejs.org/en/) - open-source, cross-platform JavaScript runtime environment
 
-### ** currently not mobile friendly **  
+---
 
+<p align="center">
+#### _currently not mobile friendly_
 ![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+</p>
