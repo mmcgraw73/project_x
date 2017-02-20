@@ -1,3 +1,4 @@
+![Alt text](https://pokitdok.com/img/logo.png "PokitDok")
 # PokitDok API Test Application
 
 ## Instructions:
