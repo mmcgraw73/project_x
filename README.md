@@ -3,7 +3,7 @@
 ## Instructions:
 - Make a web application that connects to our API
   - https://platform.pokitdok.com
-- The trading partners API endpoint is a good one to use since there are a bunch of them and they have a good number of properties for display.
+  - the trading partners API endpoint is useful due to number of fields and properties for display.
 - You can use whatever you like to connect to the API
   - nodejs client library at https://github.com/pokitdok/pokitdok-nodejs.
 - Once you connect and get some data
