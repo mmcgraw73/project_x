@@ -42,3 +42,5 @@
 + [node](https://nodejs.org/en/) - open-source, cross-platform JavaScript runtime environment
 
 ### ** currently not mobile friendly **  
+
+![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
