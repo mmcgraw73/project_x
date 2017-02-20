@@ -1,22 +1,23 @@
 # <center>PokitDok Test Application</center>
 
-# Instructions:
+## Instructions:
 ### If you will, please make a web application that connects to our API at https://platform.pokitdok.com and displays some data from there. The trading partners API endpoint is a good one to use since there are a bunch of them and they have a good number of properties for display. You can use whatever you like to connect to the API, for instance we have a nodejs client library at https://github.com/pokitdok/pokitdok-nodejs. Once you connect and get some data, render a webpage that presents it in a way you find useful or just visually pleasing.
 
 ## My Solution:
 - create an application that will retrieve all trading partners
 - allow user to view all or limit the output on the front-end via number input
 - each row will contain:
--- the name of trading partner
+-- the name of trading partner, dimmed in the UI until mouseover to lessen on screen clutter
 -- boolean [.fa-smile-o, .fa-frown-o] to show if partner supports codes [837, 270, 276]
+-- the input can be edited and resubmitted if needed 
 
 ## Server File:
 - [pokitdok.js](https://github.com/mmcgraw73/project_x/blob/pokitdok/pokitdok.js)
 
 ## Screenshots of Application:
-# <center>default view on page load</center>
+### <center>default view on page load</center>
 ![alt tag](img/pokitdok-default-view.png)
-# <center>view after input submit</center>
+### <center>list view following input submit</center>
 ![alt tag](img/pokitdok-50.png)
 
 ## Development Tools Used:
