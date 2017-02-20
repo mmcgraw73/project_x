@@ -1,4 +1,4 @@
-# <center> PokitDok Test Application </center>
+# PokitDok API Test Application
 
 ## Instructions:
 - Make a web application that connects to our API
