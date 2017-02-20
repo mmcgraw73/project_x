@@ -11,7 +11,7 @@
 
 ---
 
-## Current Solution:
+## Solution:
 - create an application that will retrieve all trading partners
 - allow user to view all or limit the output on the front-end via number input
 - each row will contain:
