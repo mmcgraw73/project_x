@@ -5,9 +5,9 @@
   - https://platform.pokitdok.com
   - the trading partners API endpoint is useful due to number of fields and properties
 - You can use whatever you like to connect to the API
-  - nodejs client library at https://github.com/pokitdok/pokitdok-nodejs.
-- Once you connect and get some data
-- Render a webpage that presents it in a way you find useful or just visually pleasing.
+  - nodejs client library at https://github.com/pokitdok/pokitdok-nodejs
+- Connect and retrieve some data
+- Render a webpage that presents response data in either a way you find useful or visually pleasing
 
 ---
 
