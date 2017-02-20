@@ -45,6 +45,5 @@
 ---
 
 <p align="center">
-_currently not mobile friendly_
 ![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 </p>
