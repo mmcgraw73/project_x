@@ -18,6 +18,17 @@
   - the name of trading partner, dimmed in UI until mouseover
   - boolean [.fa-smile-o, .fa-frown-o] to show if partner supports codes [837, 270, 276], this would need to be more robust for production worthy application
   - the input can be edited and resubmitted if needed
+  
+---
+
+## Iniitate App Locally:
+- npm install -g browserify
+- npm install -g beefy browserify
+- npm install pokitdok-nodejs --dev
+- clone + cd into the root directory of project
+- run npm update 
+- run beefy pokitdok.js:bundle.js --live
+- navigate to http://localhost:9966 
 
 ---
 
