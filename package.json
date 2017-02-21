@@ -24,7 +24,8 @@
     "grunt-wiredep": "^3.0.1",
     "jquery": "^3.1.1",
     "jshint-stylish": "^2.2.1",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "pokitdok-nodejs": "0.0.11"
   },
   "repository": "https://github.com/mmcgraw73/project_x.git",
   "engine": "node >= 0.10",
