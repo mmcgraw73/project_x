@@ -10,8 +10,8 @@ function PokitdokApp() {
         init: function() {
             this.settings = {
                 moduleName: 'PokitdokApp',
-                client_id: 'pZG5xNEnHk6aTjj3EgYD',
-                client_secr: 'WBoxMy4otoCxChecEGl4Mf3WBSHtppcjh26rGWjY',
+                client_id: '',
+                client_secr: '',
                 tradingPartnersArr: [],
                 retData: "",
                 title: 'PokitDok',
