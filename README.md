@@ -21,7 +21,7 @@
   
 ---
 
-## Iniitate App Locally:
+## Initiate App Locally:
 - npm install -g browserify
 - npm install -g beefy browserify
 - npm install pokitdok-nodejs --dev
